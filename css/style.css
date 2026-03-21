@@ -79,6 +79,12 @@
   background: var(--color-bg);
 }
 
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 16px;
@@ -89,7 +95,6 @@ body {
   background-color: var(--color-bg-primary);
   color: var(--color-text-primary);
   line-height: 1.6;
-  overflow-x: hidden;
   position: relative;
 }
 
@@ -752,6 +757,9 @@ body {
   font-size: 0.875rem;
   line-height: 1.8;
   color: var(--color-text-secondary);
+  overflow-x: auto;
+  max-width: 100%;
+  padding-bottom: 5px; /* space for custom scrollbar */
 }
 
 .code-line {
