@@ -1717,23 +1717,40 @@ body {
   
   .hero-title {
     margin: 0 auto;
-    font-size: clamp(1.4rem, 6vw, 2.2rem);
+    font-size: clamp(1.2rem, 5vw, 1.8rem);
     white-space: normal;
     word-wrap: break-word;
     min-height: 2.6em;
   }
   
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
   
   .hero-cta-group {
     justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .hero-cta-group .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
   }
   
   .hero-stats {
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  .stat-item .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .stat-item .stat-label {
+    font-size: 0.75rem;
   }
   
   [dir="rtl"] .hero-title {
