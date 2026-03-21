@@ -21,7 +21,7 @@ const translations = {
         lang_text: "AR",
         hero_badge: "Enterprise Systems & Automation",
         hero_title: "ARCHITECTING SMART SYSTEMS",
-        hero_subtitle: "We transform your operations into an automated, self-sustaining digital ecosystem. Smart solutions, integrated systems, and scalable infrastructure to eliminate bottlenecks and multiply your growth.",
+        hero_subtitle: "Transforming operations into self-sustaining digital ecosystems. Smart, scalable infrastructure to accelerate your growth.",
         hero_primary_cta: "Explore Our Solutions",
         hero_secondary_cta: "View Our Work",
         stat_projects: "Systems Built",
@@ -159,7 +159,7 @@ const translations = {
         lang_text: "EN",
         hero_badge: "بناء أنظمة مؤسسية فائقة الأمان",
         hero_title: "هندسة نظم برمجية احترافية وآمنة",
-        hero_subtitle: "نوفر حلولاً برمجية متطورة مصممة بأعلى معايير الأمان والاحترافية.<br>نحمي بياناتك ونؤتمت أعمالك لبناء بيئة رقمية مستدامة وقابلة للتوسع الاستراتيجي.",
+        hero_subtitle: "نحوّل عملياتك إلى أنظمة رقمية ذاتية الاستدامة؛ حلول برمجية ذكية وبنية تحتية قابلة للتوسع وتسريع نمو أعمالك.",
         hero_primary_cta: "استكشف حلولنا",
         hero_secondary_cta: "شاهد نماذجنا",
         stat_projects: "نظاماً مدمجاً",
@@ -601,24 +601,30 @@ function initCursorGlow() {
     });
 }
 
-// ==================== BACK TO TOP ====================
+// ==================== FLOATING ACTION MENU ====================
 function initBackToTop() {
-    const btn = document.getElementById('backToTop');
+    const floatingMenu = document.querySelector('.floating-action-menu');
+    const backToTopBtn = document.getElementById('backToTopBtn');
 
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            btn.classList.add('visible');
-        } else {
-            btn.classList.remove('visible');
-        }
-    });
-
-    btn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (floatingMenu) {
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                floatingMenu.classList.add('visible');
+            } else {
+                floatingMenu.classList.remove('visible');
+            }
         });
-    });
+    }
+
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 }
 
 // ==================== CONTACT FORM ====================
